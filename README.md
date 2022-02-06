@@ -8,12 +8,12 @@
 
 ## Docker Images
 
-1. pull
+- pull
     ```bash
     docker pull shikishimatasakilab/pmod
     ```
 
-1. build
+- build
     ```bash
     docker pull pytorch/pytorch:1.7.0-cuda11.0-cudnn8-devel
     ```
@@ -22,7 +22,7 @@
     ```
 
 ### If you use Optuna
-1. Pull the Docker image with the following command.
+- Pull the Docker image with the following command.
     ```bash
     docker pull mysql
     ```
