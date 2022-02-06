@@ -1,0 +1,942 @@
+{
+  "file_path": "/data/hdf5/SYNTHIA-SEQS-02-SUMMER.hdf5",
+  "mini-batch": {
+    "map": {
+      "type": "depth",
+      "frame-id": "stereo_left/omni_f",
+      "from": {
+        "points": "/map/pointsmap/points",
+        "pose": "map",
+        "intrinsic": "/intrinsic/stereo_left-omni_f"
+      },
+      "shape": [
+        256,
+        512
+      ],
+      "normalize": true,
+      "range": [
+        0.0,
+        80.0
+      ],
+      "label-tag": ""
+    },
+    "label": {
+      "type": "semantic2d",
+      "frame-id": "stereo_left/omni_f",
+      "from": {
+        "semantic2d": "stereo_left/omni_f/semantic2d"
+      },
+      "shape": [
+        256,
+        512
+      ],
+      "normalize": false,
+      "range": null,
+      "label-tag": "5class"
+    },
+    "depth": {
+      "type": "depth",
+      "frame-id": "stereo_left/omni_f",
+      "from": {
+        "depth": "stereo_left/omni_f/depth"
+      },
+      "shape": [
+        256,
+        512
+      ],
+      "normalize": true,
+      "range": [
+        0.0,
+        80.0
+      ],
+      "label-tag": ""
+    },
+    "camera": {
+      "type": "bgr8",
+      "frame-id": "stereo_left/omni_f",
+      "from": {
+        "bgr8": "stereo_left/omni_f/rgb"
+      },
+      "shape": [
+        256,
+        512,
+        3
+      ],
+      "normalize": true,
+      "range": [
+        0,
+        255
+      ],
+      "label-tag": ""
+    }
+  },
+  "src-data": {
+    "stereo_left/omni_b/depth": {
+      "tag": "stereo_left/omni_b/depth",
+      "type": "depth",
+      "shape": [
+        760,
+        1280
+      ],
+      "frame-id": "stereo_left/omni_b",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_left/omni_b/pose": {
+      "tag": "stereo_left/omni_b/pose",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "map",
+      "child-frame-id": "stereo_left/omni_b",
+      "label-tag": null
+    },
+    "stereo_left/omni_b/pose/rotation": {
+      "tag": "stereo_left/omni_b/pose/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_left/omni_b/pose/translation": {
+      "tag": "stereo_left/omni_b/pose/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_left/omni_b/rgb": {
+      "tag": "stereo_left/omni_b/rgb",
+      "type": "bgr8",
+      "shape": [
+        760,
+        1280,
+        3
+      ],
+      "frame-id": "stereo_left/omni_b",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_left/omni_b/semantic2d": {
+      "tag": "stereo_left/omni_b/semantic2d",
+      "type": "semantic2d",
+      "shape": [
+        760,
+        1280
+      ],
+      "frame-id": "stereo_left/omni_b",
+      "child-frame-id": null,
+      "label-tag": "synthia"
+    },
+    "stereo_left/omni_f/depth": {
+      "tag": "stereo_left/omni_f/depth",
+      "type": "depth",
+      "shape": [
+        760,
+        1280
+      ],
+      "frame-id": "stereo_left/omni_f",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_left/omni_f/pose": {
+      "tag": "stereo_left/omni_f/pose",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "map",
+      "child-frame-id": "stereo_left/omni_f",
+      "label-tag": null
+    },
+    "stereo_left/omni_f/pose/rotation": {
+      "tag": "stereo_left/omni_f/pose/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_left/omni_f/pose/translation": {
+      "tag": "stereo_left/omni_f/pose/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_left/omni_f/rgb": {
+      "tag": "stereo_left/omni_f/rgb",
+      "type": "bgr8",
+      "shape": [
+        760,
+        1280,
+        3
+      ],
+      "frame-id": "stereo_left/omni_f",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_left/omni_f/semantic2d": {
+      "tag": "stereo_left/omni_f/semantic2d",
+      "type": "semantic2d",
+      "shape": [
+        760,
+        1280
+      ],
+      "frame-id": "stereo_left/omni_f",
+      "child-frame-id": null,
+      "label-tag": "synthia"
+    },
+    "stereo_left/omni_l/depth": {
+      "tag": "stereo_left/omni_l/depth",
+      "type": "depth",
+      "shape": [
+        760,
+        1280
+      ],
+      "frame-id": "stereo_left/omni_l",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_left/omni_l/pose": {
+      "tag": "stereo_left/omni_l/pose",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "map",
+      "child-frame-id": "stereo_left/omni_l",
+      "label-tag": null
+    },
+    "stereo_left/omni_l/pose/rotation": {
+      "tag": "stereo_left/omni_l/pose/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_left/omni_l/pose/translation": {
+      "tag": "stereo_left/omni_l/pose/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_left/omni_l/rgb": {
+      "tag": "stereo_left/omni_l/rgb",
+      "type": "bgr8",
+      "shape": [
+        760,
+        1280,
+        3
+      ],
+      "frame-id": "stereo_left/omni_l",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_left/omni_l/semantic2d": {
+      "tag": "stereo_left/omni_l/semantic2d",
+      "type": "semantic2d",
+      "shape": [
+        760,
+        1280
+      ],
+      "frame-id": "stereo_left/omni_l",
+      "child-frame-id": null,
+      "label-tag": "synthia"
+    },
+    "stereo_left/omni_r/depth": {
+      "tag": "stereo_left/omni_r/depth",
+      "type": "depth",
+      "shape": [
+        760,
+        1280
+      ],
+      "frame-id": "stereo_left/omni_r",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_left/omni_r/pose": {
+      "tag": "stereo_left/omni_r/pose",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "map",
+      "child-frame-id": "stereo_left/omni_r",
+      "label-tag": null
+    },
+    "stereo_left/omni_r/pose/rotation": {
+      "tag": "stereo_left/omni_r/pose/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_left/omni_r/pose/translation": {
+      "tag": "stereo_left/omni_r/pose/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_left/omni_r/rgb": {
+      "tag": "stereo_left/omni_r/rgb",
+      "type": "bgr8",
+      "shape": [
+        760,
+        1280,
+        3
+      ],
+      "frame-id": "stereo_left/omni_r",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_left/omni_r/semantic2d": {
+      "tag": "stereo_left/omni_r/semantic2d",
+      "type": "semantic2d",
+      "shape": [
+        760,
+        1280
+      ],
+      "frame-id": "stereo_left/omni_r",
+      "child-frame-id": null,
+      "label-tag": "synthia"
+    },
+    "stereo_right/omni_b/depth": {
+      "tag": "stereo_right/omni_b/depth",
+      "type": "depth",
+      "shape": [
+        760,
+        1280
+      ],
+      "frame-id": "stereo_right/omni_b",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_right/omni_b/pose": {
+      "tag": "stereo_right/omni_b/pose",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "map",
+      "child-frame-id": "stereo_right/omni_b",
+      "label-tag": null
+    },
+    "stereo_right/omni_b/pose/rotation": {
+      "tag": "stereo_right/omni_b/pose/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_right/omni_b/pose/translation": {
+      "tag": "stereo_right/omni_b/pose/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_right/omni_b/rgb": {
+      "tag": "stereo_right/omni_b/rgb",
+      "type": "bgr8",
+      "shape": [
+        760,
+        1280,
+        3
+      ],
+      "frame-id": "stereo_right/omni_b",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_right/omni_b/semantic2d": {
+      "tag": "stereo_right/omni_b/semantic2d",
+      "type": "semantic2d",
+      "shape": [
+        760,
+        1280
+      ],
+      "frame-id": "stereo_right/omni_b",
+      "child-frame-id": null,
+      "label-tag": "synthia"
+    },
+    "stereo_right/omni_f/depth": {
+      "tag": "stereo_right/omni_f/depth",
+      "type": "depth",
+      "shape": [
+        760,
+        1280
+      ],
+      "frame-id": "stereo_right/omni_f",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_right/omni_f/pose": {
+      "tag": "stereo_right/omni_f/pose",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "map",
+      "child-frame-id": "stereo_right/omni_f",
+      "label-tag": null
+    },
+    "stereo_right/omni_f/pose/rotation": {
+      "tag": "stereo_right/omni_f/pose/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_right/omni_f/pose/translation": {
+      "tag": "stereo_right/omni_f/pose/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_right/omni_f/rgb": {
+      "tag": "stereo_right/omni_f/rgb",
+      "type": "bgr8",
+      "shape": [
+        760,
+        1280,
+        3
+      ],
+      "frame-id": "stereo_right/omni_f",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_right/omni_f/semantic2d": {
+      "tag": "stereo_right/omni_f/semantic2d",
+      "type": "semantic2d",
+      "shape": [
+        760,
+        1280
+      ],
+      "frame-id": "stereo_right/omni_f",
+      "child-frame-id": null,
+      "label-tag": "synthia"
+    },
+    "stereo_right/omni_l/depth": {
+      "tag": "stereo_right/omni_l/depth",
+      "type": "depth",
+      "shape": [
+        760,
+        1280
+      ],
+      "frame-id": "stereo_right/omni_l",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_right/omni_l/pose": {
+      "tag": "stereo_right/omni_l/pose",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "map",
+      "child-frame-id": "stereo_right/omni_l",
+      "label-tag": null
+    },
+    "stereo_right/omni_l/pose/rotation": {
+      "tag": "stereo_right/omni_l/pose/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_right/omni_l/pose/translation": {
+      "tag": "stereo_right/omni_l/pose/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_right/omni_l/rgb": {
+      "tag": "stereo_right/omni_l/rgb",
+      "type": "bgr8",
+      "shape": [
+        760,
+        1280,
+        3
+      ],
+      "frame-id": "stereo_right/omni_l",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_right/omni_l/semantic2d": {
+      "tag": "stereo_right/omni_l/semantic2d",
+      "type": "semantic2d",
+      "shape": [
+        760,
+        1280
+      ],
+      "frame-id": "stereo_right/omni_l",
+      "child-frame-id": null,
+      "label-tag": "synthia"
+    },
+    "stereo_right/omni_r/depth": {
+      "tag": "stereo_right/omni_r/depth",
+      "type": "depth",
+      "shape": [
+        760,
+        1280
+      ],
+      "frame-id": "stereo_right/omni_r",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_right/omni_r/pose": {
+      "tag": "stereo_right/omni_r/pose",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "map",
+      "child-frame-id": "stereo_right/omni_r",
+      "label-tag": null
+    },
+    "stereo_right/omni_r/pose/rotation": {
+      "tag": "stereo_right/omni_r/pose/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_right/omni_r/pose/translation": {
+      "tag": "stereo_right/omni_r/pose/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_right/omni_r/rgb": {
+      "tag": "stereo_right/omni_r/rgb",
+      "type": "bgr8",
+      "shape": [
+        760,
+        1280,
+        3
+      ],
+      "frame-id": "stereo_right/omni_r",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "stereo_right/omni_r/semantic2d": {
+      "tag": "stereo_right/omni_r/semantic2d",
+      "type": "semantic2d",
+      "shape": [
+        760,
+        1280
+      ],
+      "frame-id": "stereo_right/omni_r",
+      "child-frame-id": null,
+      "label-tag": "synthia"
+    },
+    "/intrinsic/stereo_left-omni_b": {
+      "tag": "/intrinsic/stereo_left-omni_b",
+      "type": "intrinsic",
+      "shape": null,
+      "frame-id": "stereo_left/omni_b",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/intrinsic/stereo_left-omni_f": {
+      "tag": "/intrinsic/stereo_left-omni_f",
+      "type": "intrinsic",
+      "shape": null,
+      "frame-id": "stereo_left/omni_f",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/intrinsic/stereo_left-omni_l": {
+      "tag": "/intrinsic/stereo_left-omni_l",
+      "type": "intrinsic",
+      "shape": null,
+      "frame-id": "stereo_left/omni_l",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/intrinsic/stereo_left-omni_r": {
+      "tag": "/intrinsic/stereo_left-omni_r",
+      "type": "intrinsic",
+      "shape": null,
+      "frame-id": "stereo_left/omni_r",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/intrinsic/stereo_right-omni_b": {
+      "tag": "/intrinsic/stereo_right-omni_b",
+      "type": "intrinsic",
+      "shape": null,
+      "frame-id": "stereo_right/omni_b",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/intrinsic/stereo_right-omni_f": {
+      "tag": "/intrinsic/stereo_right-omni_f",
+      "type": "intrinsic",
+      "shape": null,
+      "frame-id": "stereo_right/omni_f",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/intrinsic/stereo_right-omni_l": {
+      "tag": "/intrinsic/stereo_right-omni_l",
+      "type": "intrinsic",
+      "shape": null,
+      "frame-id": "stereo_right/omni_l",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/intrinsic/stereo_right-omni_r": {
+      "tag": "/intrinsic/stereo_right-omni_r",
+      "type": "intrinsic",
+      "shape": null,
+      "frame-id": "stereo_right/omni_r",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/map/pointsmap": {
+      "tag": "/map/pointsmap",
+      "type": "semantic3d",
+      "shape": null,
+      "frame-id": "map",
+      "child-frame-id": null,
+      "label-tag": "synthia"
+    },
+    "/map/pointsmap/points": {
+      "tag": "/map/pointsmap/points",
+      "type": "points",
+      "shape": [
+        26281023,
+        3
+      ],
+      "frame-id": "map",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/map/pointsmap/semantic1d": {
+      "tag": "/map/pointsmap/semantic1d",
+      "type": "semantic1d",
+      "shape": [
+        26281023
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": "synthia"
+    },
+    "/map/voxelgridmap": {
+      "tag": "/map/voxelgridmap",
+      "type": "voxel-semantic3d",
+      "shape": [
+        14,
+        56,
+        68
+      ],
+      "frame-id": "map",
+      "child-frame-id": null,
+      "label-tag": "synthia"
+    }
+  },
+  "tf": {
+    "tree": {
+      "map": {
+        "stereo_left/omni_b": {},
+        "stereo_left/omni_f": {},
+        "stereo_left/omni_l": {},
+        "stereo_left/omni_r": {},
+        "stereo_right/omni_b": {},
+        "stereo_right/omni_f": {},
+        "stereo_right/omni_l": {},
+        "stereo_right/omni_r": {}
+      }
+    },
+    "list": [
+      "stereo_left/omni_l",
+      "stereo_left/omni_r",
+      "stereo_right/omni_l",
+      "stereo_right/omni_f",
+      "map",
+      "stereo_left/omni_b",
+      "stereo_right/omni_r",
+      "stereo_left/omni_f",
+      "stereo_right/omni_b"
+    ],
+    "data": {
+      "stereo_left/omni_b": {
+        "key": "stereo_left/omni_b/pose",
+        "frame-id": "map",
+        "child-frame-id": "stereo_left/omni_b"
+      },
+      "stereo_left/omni_f": {
+        "key": "stereo_left/omni_f/pose",
+        "frame-id": "map",
+        "child-frame-id": "stereo_left/omni_f"
+      },
+      "stereo_left/omni_l": {
+        "key": "stereo_left/omni_l/pose",
+        "frame-id": "map",
+        "child-frame-id": "stereo_left/omni_l"
+      },
+      "stereo_left/omni_r": {
+        "key": "stereo_left/omni_r/pose",
+        "frame-id": "map",
+        "child-frame-id": "stereo_left/omni_r"
+      },
+      "stereo_right/omni_b": {
+        "key": "stereo_right/omni_b/pose",
+        "frame-id": "map",
+        "child-frame-id": "stereo_right/omni_b"
+      },
+      "stereo_right/omni_f": {
+        "key": "stereo_right/omni_f/pose",
+        "frame-id": "map",
+        "child-frame-id": "stereo_right/omni_f"
+      },
+      "stereo_right/omni_l": {
+        "key": "stereo_right/omni_l/pose",
+        "frame-id": "map",
+        "child-frame-id": "stereo_right/omni_l"
+      },
+      "stereo_right/omni_r": {
+        "key": "stereo_right/omni_r/pose",
+        "frame-id": "map",
+        "child-frame-id": "stereo_right/omni_r"
+      }
+    }
+  },
+  "label": {
+    "src": {
+      "synthia": {
+        "0": {
+          "tag": "Void",
+          "color": [
+            0,
+            0,
+            0
+          ]
+        },
+        "1": {
+          "tag": "Sky",
+          "color": [
+            128,
+            128,
+            128
+          ]
+        },
+        "2": {
+          "tag": "Building",
+          "color": [
+            0,
+            0,
+            128
+          ]
+        },
+        "3": {
+          "tag": "Road",
+          "color": [
+            128,
+            64,
+            128
+          ]
+        },
+        "4": {
+          "tag": "Sidewalk",
+          "color": [
+            192,
+            0,
+            0
+          ]
+        },
+        "5": {
+          "tag": "Fence",
+          "color": [
+            128,
+            64,
+            64
+          ]
+        },
+        "6": {
+          "tag": "Vegetation",
+          "color": [
+            0,
+            128,
+            128
+          ]
+        },
+        "7": {
+          "tag": "Pole",
+          "color": [
+            128,
+            192,
+            192
+          ]
+        },
+        "8": {
+          "tag": "Car",
+          "color": [
+            128,
+            0,
+            64
+          ]
+        },
+        "9": {
+          "tag": "Traffic Sign",
+          "color": [
+            128,
+            128,
+            192
+          ]
+        },
+        "10": {
+          "tag": "Pedestrian",
+          "color": [
+            0,
+            64,
+            64
+          ]
+        },
+        "11": {
+          "tag": "Bicycle",
+          "color": [
+            192,
+            128,
+            0
+          ]
+        },
+        "12": {
+          "tag": "Lanemarking",
+          "color": [
+            0,
+            172,
+            0
+          ]
+        },
+        "13": {
+          "tag": "Reserved",
+          "color": [
+            0,
+            0,
+            0
+          ]
+        },
+        "14": {
+          "tag": "Reserved",
+          "color": [
+            0,
+            0,
+            0
+          ]
+        },
+        "15": {
+          "tag": "Traffic Light",
+          "color": [
+            128,
+            128,
+            0
+          ]
+        }
+      }
+    },
+    "config": {
+      "5class": {
+        "src": "synthia",
+        "convert": {
+          "0": 2,
+          "1": 0,
+          "10": 4,
+          "11": 3,
+          "12": 1,
+          "13": 0,
+          "14": 0,
+          "15": 2,
+          "2": 2,
+          "3": 1,
+          "4": 1,
+          "5": 2,
+          "6": 2,
+          "7": 2,
+          "8": 3,
+          "9": 2
+        },
+        "dst": {
+          "0": {
+            "tag": "Void",
+            "color": [
+              0,
+              0,
+              0
+            ]
+          },
+          "1": {
+            "tag": "Ground",
+            "color": [
+              180,
+              130,
+              70
+            ]
+          },
+          "2": {
+            "tag": "Obstacle",
+            "color": [
+              70,
+              70,
+              70
+            ]
+          },
+          "3": {
+            "tag": "Vehicle",
+            "color": [
+              142,
+              0,
+              0
+            ]
+          },
+          "4": {
+            "tag": "Person",
+            "color": [
+              60,
+              20,
+              220
+            ]
+          }
+        }
+      }
+    }
+  }
+}

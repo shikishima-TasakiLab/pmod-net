@@ -1,0 +1,10 @@
+*.pyc
+__pycache__/
+*.h5
+*.hdf5
+datasets/
+checkpoints/
+logs/
+results/
+.vscode/
+*_backup/

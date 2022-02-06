@@ -1,0 +1,101 @@
+encoder:
+  scheduler:
+    lambda:
+      epoch_count: 1
+      niter: 100
+      niter_decay: 100
+    step:
+      niter_decay: 50
+      gamma: 0.1
+    plateau:
+      patience: 5
+      factor: 0.2
+      threshold: 0.01
+    cos:
+      niter: 100
+      eta_min: 0
+    clr:
+      base_lr: 0.000001
+      max_lr: 0.0005
+
+  optimizer:
+    lr: 0.005
+
+    adam:
+      beta1: 0.5
+      beta2: 0.999
+
+    sgd:
+      momentum: 0.9
+
+    adabelief:
+      beta1: 0.9
+      beta2: 0.999
+
+decoder_depth:
+  scheduler:
+    lambda:
+      epoch_count: 1
+      niter: 100
+      niter_decay: 100
+    step:
+      niter_decay: 50
+      gamma: 0.1
+    plateau:
+      patience: 5
+      factor: 0.2
+      threshold: 0.01
+    cos:
+      niter: 100
+      eta_min: 0
+    clr:
+      base_lr: 0.000001
+      max_lr: 0.0005
+
+  optimizer:
+    lr: 0.005
+
+    adam:
+      beta1: 0.5
+      beta2: 0.999
+
+    sgd:
+      momentum: 0.9
+
+    adabelief:
+      beta1: 0.5
+      beta2: 0.999
+
+decoder_segmentation:
+  scheduler:
+    lambda:
+      epoch_count: 1
+      niter: 100
+      niter_decay: 100
+    step:
+      niter_decay: 50
+      gamma: 0.1
+    plateau:
+      patience: 5
+      factor: 0.2
+      threshold: 0.01
+    cos:
+      niter: 100
+      eta_min: 0
+    clr:
+      base_lr: 0.000001
+      max_lr: 0.0005
+
+  optimizer:
+    lr: 0.005
+
+    adam:
+      beta1: 0.5
+      beta2: 0.999
+
+    sgd:
+      momentum: 0.9
+
+    adabelief:
+      beta1: 0.5
+      beta2: 0.999
