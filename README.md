@@ -6,14 +6,19 @@
 - Docker `>=19.03`
 - NVIDIA-Docker2
 
-## Creating Docker Images
+## Docker Images
 
-1. Create a Docker image with the following command.
+1. pull
+    ```bash
+    docker pull shikishimatasakilab/pmod
+    ```
+
+1. build
     ```bash
     docker pull pytorch/pytorch:1.7.0-cuda11.0-cudnn8-devel
     ```
     ```bash
-    ./docker/build-docker.sh -i pytorch/pytorch:1.7.0-cuda11.0-cudnn8-devel
+    ./docker/build.sh -i pytorch/pytorch:1.7.0-cuda11.0-cudnn8-devel
     ```
 
 ### If you use Optuna
@@ -37,10 +42,10 @@
 
 1. Start a Docker container with the following command.
     ```bash
-    ./docker/run-docker.sh -d path/of/the/dataset/dir
+    ./docker/run.sh -d path/of/the/dataset/dir
     ```
     ```text
-    Usage: run-docker.sh [OPTIONS...]
+    Usage: run.sh [OPTIONS...]
     OPTIONS:
         -h, --help          Show this help
         -i, --gpu-id ID     Specify the ID of the GPU

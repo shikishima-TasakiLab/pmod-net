@@ -9,7 +9,7 @@ DATASET_DIR=""
 
 function usage_exit {
   cat <<_EOS_ 1>&2
-  Usage: run-docker.sh [OPTIONS...]
+  Usage: run.sh [OPTIONS...]
   OPTIONS:
     -h, --help          Show this help
     -i, --gpu-id ID     Specify the ID of the GPU
@@ -63,4 +63,4 @@ docker run \
     ${DOCKER_VOLUME} \
     ${DOCKER_ENV} \
     --name pmod-${DEVICE_ID} \
-    pmod
+    shikishimatasakilab/pmod

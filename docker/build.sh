@@ -3,11 +3,11 @@ RUN_DIR=$(dirname $(readlink -f $0))
 PKG_DIR=$(dirname ${RUN_DIR})
 
 SRC_IMAGE=""
-DST_IMAGE="pmod"
+DST_IMAGE="shikishimatasakilab/pmod"
 
 function usage_exit {
   cat <<_EOS_ 1>&2
-  Usage: build-docker.sh [OPTIONS...]
+  Usage: build.sh [OPTIONS...]
   OPTIONS:
     -h, --help                          Show this help
     -i, --base-image DOCKER_IMAGE[:TAG] Specify the base Docker image
