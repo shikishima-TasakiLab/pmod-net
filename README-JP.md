@@ -1,14 +1,12 @@
 # PMOD-Net: Point-cloud-Map-based Obstacle Detection
 
-[日本語](./README-JP.md)
-
-## Requirement
+## 依存
 
 - NVIDIA-Driver `>=418.81.07`
 - Docker `>=19.03`
 - NVIDIA-Docker2
 
-## Docker Images
+## Dockerイメージ
 
 - pull
     ```bash
@@ -23,26 +21,27 @@
     ./docker/build.sh -i pytorch/pytorch:1.7.0-cuda11.0-cudnn8-devel
     ```
 
-### If you use Optuna
-- Pull the Docker image with the following command.
+### Optunaを使用する場合
+
+- 次のコマンドでDockerイメージをプル.
     ```bash
     docker pull mysql
     ```
 
-## Preparing Datasets
+## データセットの準備
 
 ### KITTI-360
 
-1. Store the KITTI-360 dataset in HDF5 using "[h5_kitti360](https://github.com/shikishima-TasakiLab/h5_kitti360)".
-1. For the dataloader configuration file, use `./config/kitti360-5class.json` for training and `./config/kitti360-5class-ins.json` for validation and evaluation.
+1. KITTI-360データセットを"[h5_kitti360](https://github.com/shikishima-TasakiLab/h5_kitti360)"を用いてHDF5に変換する.
+1. データローダの設定として, 学習時は`./config/kitti360-5class.json`を, Validation・評価時は`./config/kitti360-5class-ins.json`を使用する.
 
 ### Other Datasets
 
-1. See this [file](OTHER_DATASETS.md).
+1. [このページ](OTHER_DATASETS.md)を参照.
 
-## Start a Docker Container
+## Dockerコンテナの起動
 
-1. Start a Docker container with the following command.
+1. 次のコマンドでDockerコンテナを起動する.
     ```bash
     ./docker/run.sh -d path/of/the/dataset/dir
     ```
@@ -54,9 +53,9 @@
         -d, --dataset-dir   Specify the directory where datasets are stored
     ```
 
-## Training
+## 学習
 
-1. Start training with the following command.
+1. 次のコマンドで学習を開始する.
     ```bash
     python train.py -t TAG -tdc path/of/the/config.json \
       -td path/of/the/dataset1.hdf5 [path/of/the/dataset1.hdf5 ...] \
@@ -144,7 +143,7 @@
       --detect-anomaly      AnomalyMode
     ```
 
-1. The checkpoints of the training will be stored in the "./checkpoints" directory.
+1. チェックポイントは"./checkpoints"ディレクトリに保存される.
 
     ```text
     checkpoints/
@@ -157,9 +156,9 @@
     　│　└ validation.xlsx
     ```
 
-## Evaluation
+## 評価
 
-1. Start evaluation with the following command.
+1. 次のコマンドで評価を行う.
     ```bash
     python evaluate.py -t TAG -cp path/of/the/checkpoint.pth \
       -edc path/of/the/config.json \
@@ -194,7 +193,7 @@
                             Batch Size
     ```
 
-1. The results of the evaluation will be stored in the "./results" directory.
+1. 評価結果は"./results"ディレクトリに保存される.
 
     ```text
     results/
@@ -205,9 +204,9 @@
     　│　│　└ result.xlsx
     ```
 
-## data.hdf5 &rarr; Video (.avi)
+## data.hdf5 &rarr; ビデオ (.avi)
 
-1. Convert "data.hdf5" to video (.avi) with the following command.
+1. 評価結果に含まれる "data.hdf5" は次のコマンドでビデオ(.avi)に変換する.
     ```bash
     python data2avi.py -i path/of/the/data.hdf5
     ```
@@ -223,11 +222,13 @@
       -r, --raw             Use raw codec
     ```
 
-1. The converted video will be output to the same directory as the input HDF5 file.
+1. 変換したビデオは入力のHDF5ファイルと同じディレクトリに保存される.
 
-## Checkpoint (.pth) &rarr; Torch Script model (.pt)
+## チェックポイント (.pth) &rarr; Torch Script model (.pt)
 
-1. Convert checkpoint (.pth) to Torch Script model (.pt) with the following command.
+学習したモデルをLibTorchで使用する場合などに実行する.
+
+1. 次のコマンドでチェックポイント(.pth)をTorch Script model (.pt)に変換する.
     ```bash
     python ckpt2tsm.py -c path/of/the/checkpoint.pth
     ```
@@ -244,16 +245,16 @@
                             Height of input images.
     ```
 
-1. The converted Torch Script model will be output to the same directory as the input checkpoint.
+1. 変換したTorch Script modelは入力したチェックポイントと同じディレクトリに保存される.
 
 ## Training with Optuna
 
-1. Start a Docker container for MySQL with the following command in another terminal.
+1. MySQLのDockerコンテナを別のターミナルで起動する.
     ```bash
     ./optuna/run-mysql.sh
     ```
 
-1. Start training with the following command.
+1. 次のコマンドで学習を開始する.
     ```bash
     python optuna_train.py -t TAG -tdc path/of/the/config.json \
       -td path/of/the/dataset1.hdf5 [path/of/the/dataset2.hdf5 ...] -bs BLOCK_SIZE
@@ -341,4 +342,4 @@
                             Weight of Segmentation Aux2 CrosEntropy Loss.
     ```
 
-1. To run parallel training on other machines, specify the server with the "-H" option.
+1. 他のマシンを用いて並列に学習する場合は, `-H`オプションを用いてMySQLを実行しているサーバーを指定する.
