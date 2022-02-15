@@ -59,7 +59,7 @@
     ```bash
     python train.py -t TAG -tdc path/of/the/config.json \
       -td path/of/the/dataset1.hdf5 [path/of/the/dataset1.hdf5 ...] \
-      -vd path/of/the/config.json \
+      -vdc path/of/the/config.json \
       -bs BLOCK_SIZE
     ```
     ```text
