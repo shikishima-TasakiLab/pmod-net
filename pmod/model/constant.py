@@ -152,6 +152,7 @@ ARG_EVAL_DL_CONFIG = 'eval_dl_config'
 ARG_CHECK_POINT = 'check_point'
 ARG_TRAIN_CONFIG = 'train_config'
 ARG_THRESHOLDS = 'thresholds'
+ARG_NOMAP = 'nomap'
 # Eval: Other
 ARG_LABEL_TAGS = 'label_tags'
 # Optuna

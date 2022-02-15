@@ -42,6 +42,11 @@ def parse_args() -> dict:
         help='PATH of evaluation HDF5 datasets.'
     )
     parser_eval.add_argument(
+        f'--{arg_hyphen(ARG_NOMAP)}',
+        action='store_true',
+        help='No map input.'
+    )
+    parser_eval.add_argument(
         f'--{arg_hyphen(ARG_TRAIN_CONFIG)}',
         type=str, metavar='PATH', default=None,
         help='PATH of "config.yaml"'
@@ -356,9 +361,12 @@ def main(args: Dict[str, Union[int, float, str, dict]], workdir: str, pmodnet: n
                     continue
 
                 in_camera: torch.Tensor = batch[DATASET_CAMERA].to(device)
-                in_map: torch.Tensor = batch[DATASET_MAP].to(device)
                 gt_label: torch.Tensor = batch[DATASET_LABEL].to(device)
                 gt_depth: torch.Tensor = batch[DATASET_DEPTH].to(device)
+                if args[ARG_NOMAP] is True:
+                    in_map: torch.Tensor = torch.full_like(batch[DATASET_MAP], fill_value=2.0).to(device)
+                else:
+                    in_map: torch.Tensor = batch[DATASET_MAP].to(device)
 
                 pred: PMOD_OUTPUT = pmodnet(camera=in_camera, map_depth=in_map)
 
