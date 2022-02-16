@@ -183,6 +183,13 @@
                             Block size of dataset.
       -ed PATH [PATH ...], --eval-data PATH [PATH ...]
                             PATH of evaluation HDF5 datasets.
+      --nomap               No map input.
+      --tr-error-range TR_ERROR_RANGE TR_ERROR_RANGE TR_ERROR_RANGE
+                            Translation Error Range [m]. This is used when the
+                            data do not contain poses.
+      --rot-error-range ROT_ERROR_RANGE
+                            Rotation Error Range [deg]. This is used when the data
+                            do not contain poses.
       --train-config PATH   PATH of "config.yaml"
       --thresholds THRESHOLDS [THRESHOLDS ...]
                             Thresholds of depth.

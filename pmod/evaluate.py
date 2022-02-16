@@ -47,6 +47,16 @@ def parse_args() -> dict:
         help='No map input.'
     )
     parser_eval.add_argument(
+        f'--{arg_hyphen(ARG_TR_ERROR_RANGE)}',
+        type=float, nargs=3, default=[0.6, 1.3, 0.7],
+        help='Translation Error Range [m]. This is used when the data do not contain poses.'
+    )
+    parser_eval.add_argument(
+        f'--{arg_hyphen(ARG_ROT_ERROR_RANGE)}',
+        type=float, default=3.0,
+        help='Rotation Error Range [deg]. This is used when the data do not contain poses.'
+    )
+    parser_eval.add_argument(
         f'--{arg_hyphen(ARG_TRAIN_CONFIG)}',
         type=str, metavar='PATH', default=None,
         help='PATH of "config.yaml"'
