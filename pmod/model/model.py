@@ -53,7 +53,18 @@ class PMOD(nn.Module):
         )
 
     def forward_adapnet(self, camera: Tensor, map_depth: Tensor) -> PMOD_OUTPUT:
-        return self.forward(camera, map_depth)
+        input_tensor: Tensor = torch.cat((camera, map_depth), dim=1)
+        skips: List[Tensor] = self.encoder(input_tensor)
+
+        skips.append(self.easpp(skips[-1]))
+
+        segmentation: ADAPNET_DECODER_OUTPUT = self.decoder_seg(skips)
+        depth: ADAPNET_DECODER_OUTPUT = self.decoder_depth(skips)
+
+        return PMOD_OUTPUT(
+            segmentation.output, self.relu(depth.output),
+            segmentation.aux1, segmentation.aux2
+        )
 
 
 class AdapnetEncoder(nn.Module):
