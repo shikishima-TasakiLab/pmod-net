@@ -52,6 +52,9 @@ class PMOD(nn.Module):
             segmentation.aux1, segmentation.aux2
         )
 
+    def forward_adapnet(self, camera: Tensor, map_depth: Tensor) -> PMOD_OUTPUT:
+        return self.forward(camera, map_depth)
+
 
 class AdapnetEncoder(nn.Module):
     def __init__(
