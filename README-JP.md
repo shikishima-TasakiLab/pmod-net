@@ -350,3 +350,23 @@
     ```
 
 1. 他のマシンを用いて並列に学習する場合は, `-H`オプションを用いてMySQLを実行しているサーバーを指定する.
+
+## 引用
+
+```bibtex
+@article{pmodnet,
+    author = {Junya Shikishima and Keisuke Urasaki and Tsuyoshi Tasaki},
+    title = {PMOD-Net: point-cloud-map-based metric scale obstacle detection by using a monocular camera},
+    journal = {Advanced Robotics},
+    pages = {1-9},
+    year  = {2022},
+    publisher = {Taylor & Francis},
+    doi = {10.1080/01691864.2022.2153080},
+    URL = {
+        https://doi.org/10.1080/01691864.2022.2153080
+    },
+    eprint = {
+        https://doi.org/10.1080/01691864.2022.2153080
+    }
+}
+```
