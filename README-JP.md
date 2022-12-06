@@ -1,4 +1,4 @@
-# PMOD-Net: Point-cloud-Map-based Obstacle Detection
+# PMOD-Net: point-cloud-map-based metric scale obstacle detection by using a monocular camera
 
 ## 依存
 
