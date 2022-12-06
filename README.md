@@ -1,4 +1,4 @@
-# PMOD-Net: Point-cloud-Map-based Obstacle Detection
+# PMOD-Net: point-cloud-map-based metric scale obstacle detection by using a monocular camera
 
 [日本語](./README-JP.md)
 
@@ -349,3 +349,25 @@
     ```
 
 1. To run parallel training on other machines, specify the server with the "-H" option.
+
+## Citation
+
+If you find this work useful in your research, please consider citing:
+
+```bibtex
+@article{pmodnet,
+    author = {Junya Shikishima and Keisuke Urasaki and Tsuyoshi Tasaki},
+    title = {PMOD-Net: point-cloud-map-based metric scale obstacle detection by using a monocular camera},
+    journal = {Advanced Robotics},
+    pages = {1-9},
+    year  = {2022},
+    publisher = {Taylor & Francis},
+    doi = {10.1080/01691864.2022.2153080},
+    URL = {
+        https://doi.org/10.1080/01691864.2022.2153080
+    },
+    eprint = {
+        https://doi.org/10.1080/01691864.2022.2153080
+    }
+}
+```
