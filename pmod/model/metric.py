@@ -67,12 +67,12 @@ class MetricInRange(nn.Module):
         _range_list: List[Tensor] = []
         _prev_th: float = 0.0
         if self.num_classes > 0:
-            _one_hot: Tensor = F.one_hot(seg_gt, num_classes=self.num_classes)
+            _one_hot: Tensor = F.one_hot(seg_gt, num_classes=self.num_classes).bool()
         for th_idx in range(self.thresholds.shape[0]):
             _th: Tensor = self.thresholds[th_idx].to(gt.device)
             if _th <= _prev_th:
                 continue
-            _in_range: Tensor = (_prev_th < gt) & (gt <= _th)  # NCHW
+            _in_range: Tensor = (_prev_th < gt) & (gt <= _th) & (gt <= 1.0)  # NCHW
             if self.num_classes > 0:
                 _in_range: Tensor = torch.squeeze(_in_range, dim=1)  # NHW
                 _in_range_oh: Tensor = _one_hot.clone()  # NHWC
@@ -81,7 +81,7 @@ class MetricInRange(nn.Module):
                     0, 3, 1, 2).unsqueeze(dim=1))  # NTCHW
             else:
                 _range_list.append(_in_range.unsqueeze(dim=1))  # NTCHW
-            _prev_th = _th
+            _prev_th = _th.clone()
 
         range_cat: Tensor = torch.cat(_range_list, dim=1)  # NTCHW
         range_cnt: Tensor = range_cat.sum(
