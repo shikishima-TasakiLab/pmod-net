@@ -103,6 +103,11 @@ def parse_args() -> dict:
         help='PATH of evaluation HDF5 datasets.'
     )
     parser_train.add_argument(
+        f'--{arg_hyphen(ARG_NOMAP)}',
+        action='store_true',
+        help='No map input.'
+    )
+    parser_train.add_argument(
         f'--{arg_hyphen(ARG_THRESHOLDS)}',
         type=float, nargs='+', default=DEFAULT_THRESHOLDS,
         help='Thresholds of depth.'
@@ -548,6 +553,7 @@ def main(args: Dict[str, Union[int, float, str, dict]], workdir: str, trial: opt
                         ARG_EVAL_DL_CONFIG: args[ARG_EVAL_DL_CONFIG],
                         ARG_BLOCK_SIZE: args[ARG_BLOCK_SIZE],
                         ARG_EVAL_DATA: args[ARG_EVAL_DATA],
+                        ARG_NOMAP: args[ARG_NOMAP],
                         ARG_BATCH_SIZE: args[ARG_BATCH_SIZE],
                         ARG_CHECK_POINT: pmodnet_ckpt_path,
                         ARG_THRESHOLDS: args[ARG_THRESHOLDS],
