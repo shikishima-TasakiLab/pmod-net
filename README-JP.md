@@ -358,15 +358,13 @@
     author = {Junya Shikishima and Keisuke Urasaki and Tsuyoshi Tasaki},
     title = {PMOD-Net: point-cloud-map-based metric scale obstacle detection by using a monocular camera},
     journal = {Advanced Robotics},
-    pages = {1-9},
-    year  = {2022},
+    volume = {37},
+    number = {7},
+    pages = {458-466},
+    year  = {2023},
     publisher = {Taylor & Francis},
     doi = {10.1080/01691864.2022.2153080},
-    URL = {
-        https://doi.org/10.1080/01691864.2022.2153080
-    },
-    eprint = {
-        https://doi.org/10.1080/01691864.2022.2153080
-    }
+    URL = {https://doi.org/10.1080/01691864.2022.2153080},
+    eprint = {https://doi.org/10.1080/01691864.2022.2153080}
 }
 ```
